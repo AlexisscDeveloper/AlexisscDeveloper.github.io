@@ -18,6 +18,8 @@
 });*/
 
 document.addEventListener("DOMContentLoaded", () => {
+let lastCharacterId = 0; //almacenar el ultimo ID del personaje
+    
     document.querySelector(".btn-primary").addEventListener("click",async (event) => {
         var itemlist = document.getElementById("my-list");
         var template = document.getElementById("list-template");
@@ -26,8 +28,8 @@ document.addEventListener("DOMContentLoaded", () => {
         
 
         
-
-
+        lastCharacterId++ //hacer que vaya incrementando
+        
         const response = await fetch("https://rickandmortyapi.com/api/character/1"); //Me traigo la API
         const data = await response.json(); //Lo convertimos a JSON, ya que si no se convierte los datos me los pone indefinidos
 
@@ -45,6 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".btn.btn-light").addEventListener("click", event => {
         var itemlist = document.getElementById("my-list");
         itemlist.replaceChildren();
+        lastCharacterId = 0;
     });
 });
 
