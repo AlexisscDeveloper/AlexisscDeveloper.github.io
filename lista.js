@@ -30,7 +30,7 @@ let lastCharacterId = 0; //almacenar el ultimo ID del personaje
         
         lastCharacterId++; //hacer que vaya incrementando
         
-        const response = await fetch("https://rickandmortyapi.com/api/character/1"); //Me traigo la API
+        const response = await fetch(`https://rickandmortyapi.com/api/character/${lastCharacterId}`); //Me traigo la API
         const data = await response.json(); //Lo convertimos a JSON, ya que si no se convierte los datos me los pone indefinidos
 
         clone.querySelector("[data-id='number']").textContent = `${total}`;
