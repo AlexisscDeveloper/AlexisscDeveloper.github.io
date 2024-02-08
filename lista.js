@@ -1,24 +1,7 @@
-/*document.addEventListener("DOMContentLoaded", () => {
-    document.querySelector(".btn-primary").addEventListener("click", event => {
-        var itemlist = document.getElementById("my-list");
-        var template = document.getElementById("list-template");
-        var total = itemlist.childElementCount + 1;
-        var clone = document.importNode(template.content, true);
-        clone.querySelector("[data-id='number']").textContent = `${total}`;
-        clone.querySelector("[data-id='imagen']").textContent = "imagen";
-        clone.querySelector("[data-id='title']").textContent = "Product";
-        clone.querySelector("[data-id='content']").textContent = "It's a new item";
-        itemlist.appendChild(clone);
-    });
 
-    document.querySelector(".btn.btn-light").addEventListener("click", event => {
-        var itemlist = document.getElementById("my-list");
-        itemlist.replaceChildren();
-    });
-});*/
 
 document.addEventListener("DOMContentLoaded", () => {
-let lastCharacterId = 0; //almacenar el ultimo ID del personaje
+let PersonajeID = 0; //almacenar el ultimo ID del personaje
     
     document.querySelector(".btn-primary").addEventListener("click",async (event) => {
         var itemlist = document.getElementById("my-list");
@@ -28,9 +11,9 @@ let lastCharacterId = 0; //almacenar el ultimo ID del personaje
         
 
         
-        lastCharacterId++; //hacer que vaya incrementando
+        PersonajeID++; //hacer que vaya incrementando 
         
-        const response = await fetch(`https://rickandmortyapi.com/api/character/${lastCharacterId}`); //Me traigo la API
+        const response = await fetch(`https://rickandmortyapi.com/api/character/${PersonajeID}`); //Me traigo la API asi mismo agregamos la variable para que el id vaya incrementando
         const data = await response.json(); //Lo convertimos a JSON, ya que si no se convierte los datos me los pone indefinidos
 
         clone.querySelector("[data-id='number']").textContent = `${total}`;
@@ -47,7 +30,7 @@ let lastCharacterId = 0; //almacenar el ultimo ID del personaje
     document.querySelector(".btn.btn-light").addEventListener("click", event => {
         var itemlist = document.getElementById("my-list");
         itemlist.replaceChildren();
-       /*lastCharacterId = 0;*/
+       PersonajeID = 0;
     });
 });
 
