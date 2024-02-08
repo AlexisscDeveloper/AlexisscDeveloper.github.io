@@ -47,7 +47,7 @@ let lastCharacterId = 0; //almacenar el ultimo ID del personaje
     document.querySelector(".btn.btn-light").addEventListener("click", event => {
         var itemlist = document.getElementById("my-list");
         itemlist.replaceChildren();
-        lastCharacterId = 0;
+       /*lastCharacterId = 0;*/
     });
 });
 
