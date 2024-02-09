@@ -13,12 +13,13 @@
 
 #my-list {
     display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se muevan hacia abajo cuando no quepan horizontalmente */
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Alinear los elementos al principio del contenedor */
 }
 
 #my-list li {
-    flex: 0 0 calc(25% - 10px); /* Ajusta el ancho de cada elemento al 25% con márgenes */
-    margin: 5px; /* Agrega margen entre los elementos */
+    margin-right: 10px; /* Ajustar el margen entre los elementos */
+    margin-bottom: 10px; /* Ajustar el margen inferior de los elementos */
 }
 
 
