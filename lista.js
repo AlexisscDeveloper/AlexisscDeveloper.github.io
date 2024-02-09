@@ -19,8 +19,12 @@ document.addEventListener("DOMContentLoaded", () => {
         clone.querySelector("[data-id='Estatus']").textContent = `${data.status}`;
         clone.querySelector("[data-id='Especie']").textContent = `${data.species}`;
 
-        itemlist.style.display = "flex";  // Aplicar estilo flex al contenedor de la lista
-        itemlist.style.flexDirection = "row";  // Establecer la dirección a fila para que los elementos se alineen horizontalmente
+        // Aplicar estilos flex al contenedor de la lista y sus elementos
+        itemlist.style.display = "flex";
+        itemlist.style.flexDirection = "row";
+        clone.style.display = "flex";
+        clone.style.flexDirection = "row";
+
         itemlist.appendChild(clone);
     });
 
