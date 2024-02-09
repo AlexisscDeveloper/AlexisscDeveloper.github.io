@@ -32,13 +32,15 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 10px;
-    width: 100%; /* Añade esto para asegurarte de que el contenedor use todo el ancho disponible */
+    width: 100%;
+    justify-content: center; /* Centra el contenido horizontalmente */
 }
 
 .list-group-item {
-    width: 100%; /* Añade esto para que los elementos ocupen todo el ancho disponible */
+    width: 100%;
     margin-bottom: 10px;
 }
+
 
 
 
