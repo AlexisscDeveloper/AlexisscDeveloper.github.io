@@ -11,17 +11,6 @@
     align-items: center;
 }
 
-#my-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start; /* Alinear los elementos al principio del contenedor */
-}
-
-#my-list li {
-    margin-right: 10px; /* Ajustar el margen entre los elementos */
-    margin-bottom: 10px; /* Ajustar el margen inferior de los elementos */
-}
-
 
 .Nombre_Personaje, .Estatus_Personaje, .Especie_Personaje, .Id_Personaje {
     display: flex;
