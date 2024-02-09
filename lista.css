@@ -1,47 +1,26 @@
-.mi-img {
+ .mi-img{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.mi-img img {
-    width: 100%; /* Cambiado a porcentaje para ser responsive */
-    max-width: 200px; /* Establece un ancho máximo para evitar que las imágenes sean demasiado grandes en pantallas grandes */
-    height: auto; /* Mantiene la proporción de la imagen */
+
+.mi-img img{
+    width: 200px;
+    height: 200px;
+    align-items: center;
 }
 
-.Nombre_Personaje,
-.Estatus_Personaje,
-.Especie_Personaje,
-.Id_Personaje {
+.Nombre_Personaje, .Estatus_Personaje, .Especie_Personaje, .Id_Personaje {
     display: flex;
     align-items: center;
     text-align: center;
 }
 
-.Nombre_Personaje p,
-.Estatus_Personaje p,
-.Especie_Personaje p,
-.Id_Personaje p {
-    margin: 0;
+.Nombre_Personaje p, .Estatus_Personaje p, .Especie_Personaje p, .Id_Personaje p {
+    margin: 0; /* Elimina el margen predeterminado del párrafo */
     margin-right: 5px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-/* Reglas de medios para hacer responsive */
-@media (max-width: 600px) {
-    .mi-img img {
-        width: 100%; /* Cambiar el ancho al 100% en pantallas más pequeñas */
-        max-width: none; /* Eliminar el ancho máximo en pantallas más pequeñas */
-    }
-
-    .Nombre_Personaje,
-    .Estatus_Personaje,
-    .Especie_Personaje,
-    .Id_Personaje {
-        flex-direction: column; /* Cambiar la dirección a columna en pantallas más pequeñas */
-        align-items: flex-start; /* Alinear a la izquierda en pantallas más pequeñas */
-    }
 }
 
 
