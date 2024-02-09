@@ -7,14 +7,12 @@ document.addEventListener("DOMContentLoaded", () => {
         var total = itemlist.childElementCount + 1;
         var clone = document.importNode(template.content, true);
 
-        PersonajeID++; // Hacer que vaya incrementando el ID cada vez que se le de al botón de "agregar personaje" 
-        
+        PersonajeID++;
+
         const response = await fetch(`https://rickandmortyapi.com/api/character/${PersonajeID}`);
         const data = await response.json();
 
         clone.querySelector("[data-id='number']").textContent = `${total}`;
-
-        // Se crea una variable para poder almacenar la imagen del personaje
         clone.querySelector("[data-id='imagen']").src = data.image;
         clone.querySelector("[data-id='Id']").textContent = `${data.id}`;
         clone.querySelector("[data-id='Nombre']").textContent = `${data.name}`;
@@ -22,8 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
         clone.querySelector("[data-id='Especie']").textContent = `${data.species}`;
 
         // Aplicar estilos flex al contenedor de la lista para que los elementos se alineen horizontalmente
+        clone.style.flex = "0 0 auto"; // Establecer el tamaño automático
         itemlist.style.display = "flex";
-        itemlist.style.flexDirection = "row"; // Alinear los elementos horizontalmente
         itemlist.style.flexWrap = "wrap"; // Permitir que los elementos se envuelvan a la siguiente fila
         itemlist.appendChild(clone);
     });
