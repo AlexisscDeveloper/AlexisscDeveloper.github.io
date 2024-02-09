@@ -5,8 +5,9 @@
 }
 
 .mi-img img {
-    width: 200px;
-    height: 200px;
+    width: 100%; /* Cambiado a porcentaje para ser responsive */
+    max-width: 200px; /* Establece un ancho máximo para evitar que las imágenes sean demasiado grandes en pantallas grandes */
+    height: auto; /* Mantiene la proporción de la imagen */
 }
 
 .Nombre_Personaje,
@@ -27,17 +28,20 @@
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-/* Añadir estilos para la lista */
-ul {
-    list-style: none; /* Elimina los estilos de la lista predeterminados */
-    padding: 0; /* Elimina el relleno predeterminado de la lista */
-    display: flex; /* Utiliza el modelo de diseño flexbox para la lista */
-    flex-direction: column; /* Establece la dirección de los elementos en columna */
-    align-items: flex-start; /* Alinea los elementos a la izquierda */
-}
+/* Reglas de medios para hacer responsive */
+@media (max-width: 600px) {
+    .mi-img img {
+        width: 100%; /* Cambiar el ancho al 100% en pantallas más pequeñas */
+        max-width: none; /* Eliminar el ancho máximo en pantallas más pequeñas */
+    }
 
-ul li {
-    margin-bottom: 10px; /* Espacio entre elementos de la lista */
+    .Nombre_Personaje,
+    .Estatus_Personaje,
+    .Especie_Personaje,
+    .Id_Personaje {
+        flex-direction: column; /* Cambiar la dirección a columna en pantallas más pequeñas */
+        align-items: flex-start; /* Alinear a la izquierda en pantallas más pequeñas */
+    }
 }
 
 
