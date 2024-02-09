@@ -1,13 +1,11 @@
- .mi-img {
+.mi-img {
     display: flex;
-    /*align-items: center;
-    justify-content: center;*/
+    align-items: center;
 }
 
 .mi-img img {
     width: 200px;
     height: 200px;
-    /*align-items: center;*/
 }
 
 .Nombre_Personaje,
@@ -15,8 +13,9 @@
 .Especie_Personaje,
 .Id_Personaje {
     display: flex;
-    /*align-items: center;
-    text-align: center;*/
+    align-items: center;
+    text-align: center;
+    margin-left: auto; /* Alinear a la derecha */
 }
 
 .Nombre_Personaje p,
@@ -32,14 +31,17 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 10px;
-    width: 100%; /* Añade esto para asegurarte de que el contenedor use todo el ancho disponible */
+    width: 100%;
 }
 
 .list-group-item {
-    width: 100%; /* Añade esto para que los elementos ocupen todo el ancho disponible */
+    width: 100%;
     margin-bottom: 10px;
 }
 
+.col-md-6 .btn {
+    width: auto !important;
+}
 
 
 
