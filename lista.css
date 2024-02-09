@@ -32,13 +32,13 @@ ul {
     list-style: none; /* Elimina los estilos de la lista predeterminados */
     padding: 0; /* Elimina el relleno predeterminado de la lista */
     display: flex; /* Utiliza el modelo de diseño flexbox para la lista */
+    flex-direction: column; /* Establece la dirección de los elementos en columna */
+    align-items: flex-start; /* Alinea los elementos a la izquierda */
 }
 
 ul li {
-    margin-right: 10px; /* Espacio entre elementos de la lista */
+    margin-bottom: 10px; /* Espacio entre elementos de la lista */
 }
-
-
 
 
 
