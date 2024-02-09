@@ -19,14 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
         clone.querySelector("[data-id='Estatus']").textContent = `${data.status}`;
         clone.querySelector("[data-id='Especie']").textContent = `${data.species}`;
 
-        // Agregar un estilo para que los elementos se generen uno al lado del otro
-        clone.querySelector("[data-id='number']").style.display = "inline-block";
-        clone.querySelector("[data-id='imagen']").style.display = "inline-block";
-        clone.querySelector("[data-id='Id']").style.display = "inline-block";
-        clone.querySelector("[data-id='Nombre']").style.display = "inline-block";
-        clone.querySelector("[data-id='Estatus']").style.display = "inline-block";
-        clone.querySelector("[data-id='Especie']").style.display = "inline-block";
-
+        itemlist.style.display = "flex";  // Aplicar estilo flex al contenedor de la lista
+        itemlist.style.flexDirection = "row";  // Establecer la dirección a fila para que los elementos se alineen horizontalmente
         itemlist.appendChild(clone);
     });
 
