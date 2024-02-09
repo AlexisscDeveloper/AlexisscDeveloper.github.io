@@ -32,14 +32,11 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 10px;
-}
-
-.container {
-    max-width: 1200px; /* Establece el ancho máximo según tus preferencias */
+    width: 100%; /* Añade esto para asegurarte de que el contenedor use todo el ancho disponible */
 }
 
 .list-group-item {
-    width: 100%;
+    width: 100%; /* Añade esto para que los elementos ocupen todo el ancho disponible */
     margin-bottom: 10px;
 }
 
