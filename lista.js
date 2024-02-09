@@ -21,11 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
         clone.querySelector("[data-id='Estatus']").textContent = `${data.status}`;
         clone.querySelector("[data-id='Especie']").textContent = `${data.species}`;
 
-        // Aplicar estilos flex al contenedor de la lista para que los elementos se alineen horizontalmente
-        itemlist.style.display = "flex";
-        itemlist.style.flexDirection = "row"; // Alinear los elementos horizontalmente
-        itemlist.style.flexWrap = "wrap"; // Permitir que los elementos se desplacen hacia abajo si se llena la fila
-        itemlist.style.maxWidth = "100%"; // Evitar que la lista exceda el ancho de la ventana
+        // Aplicar estilo inline-block para que los elementos se alineen horizontalmente
+        clone.style.display = "inline-block";
         itemlist.appendChild(clone);
     });
 
@@ -35,4 +32,3 @@ document.addEventListener("DOMContentLoaded", () => {
         PersonajeID = 0; // Reinicia el PersonajeID a cero al darle al botón de limpiar
     });
 });
-
