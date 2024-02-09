@@ -1,11 +1,13 @@
 .mi-img {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .mi-img img {
     width: 200px;
     height: 200px;
+    align-items: center;
 }
 
 .Nombre_Personaje,
@@ -15,7 +17,6 @@
     display: flex;
     align-items: center;
     text-align: center;
-    margin-left: auto; /* Alinear a la derecha */
 }
 
 .Nombre_Personaje p,
@@ -35,12 +36,8 @@
 }
 
 .list-group-item {
-    width: 100%;
+    width: 100%; 
     margin-bottom: 10px;
-}
-
-.col-md-6 .btn {
-    width: auto !important;
 }
 
 
