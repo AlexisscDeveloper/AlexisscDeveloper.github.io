@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Aplicar estilos flex al contenedor de la lista para que los elementos se alineen horizontalmente
         itemlist.style.display = "flex";
-        itemlist.style.flexDirection = "row"; // Alinear los elementos horizontalmente
+        itemlist.style.flexWrap = "wrap"; // Permitir que los elementos se envuelvan a la siguiente fila
         itemlist.appendChild(clone);
     });
 
@@ -33,4 +33,3 @@ document.addEventListener("DOMContentLoaded", () => {
         PersonajeID = 0; // Reinicia el PersonajeID a cero al darle al botón de limpiar
     });
 });
-
