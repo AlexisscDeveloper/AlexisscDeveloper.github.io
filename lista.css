@@ -1,5 +1,3 @@
-/* Tu código CSS existente */
-
 .mi-img {
     display: flex;
     align-items: center;
@@ -30,16 +28,15 @@
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-/* Nuevas reglas para la disposición de la lista */
 #my-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
 }
 
 .list-group-item {
-    flex: 0 0 calc(33.33% - 10px);
-    margin: 5px;
+    width: 100%;
+    margin-bottom: 10px;
 }
 
 
