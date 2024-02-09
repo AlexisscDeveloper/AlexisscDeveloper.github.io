@@ -1,26 +1,45 @@
- .mi-img{
+/* Tu código CSS existente */
+
+.mi-img {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-
-.mi-img img{
+.mi-img img {
     width: 200px;
     height: 200px;
     align-items: center;
 }
 
-.Nombre_Personaje, .Estatus_Personaje, .Especie_Personaje, .Id_Personaje {
+.Nombre_Personaje,
+.Estatus_Personaje,
+.Especie_Personaje,
+.Id_Personaje {
     display: flex;
     align-items: center;
     text-align: center;
 }
 
-.Nombre_Personaje p, .Estatus_Personaje p, .Especie_Personaje p, .Id_Personaje p {
-    margin: 0; /* Elimina el margen predeterminado del párrafo */
+.Nombre_Personaje p,
+.Estatus_Personaje p,
+.Especie_Personaje p,
+.Id_Personaje p {
+    margin: 0;
     margin-right: 5px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Nuevas reglas para la disposición de la lista */
+#my-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.list-group-item {
+    flex: 0 0 calc(33.33% - 10px);
+    margin: 5px;
 }
 
 
