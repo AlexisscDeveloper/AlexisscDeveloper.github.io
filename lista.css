@@ -1,5 +1,5 @@
 body {
-    background-image: ('fondochido.jpg');
+    background-image: ('/fondochido.jpg');
     padding: 20px; /* Ajusta el valor según el espacio deseado alrededor de los elementos */
     margin: 0; /* Elimina el margen predeterminado del cuerpo */
 }
