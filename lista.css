@@ -41,6 +41,32 @@
     margin-bottom: 10px;
 }
 
+#list-template {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px; /* Ajusta el margen inferior según sea necesario */
+}
+
+#list-template .flex-grow-1 {
+    display: flex;
+    flex-direction: column;
+}
+
+#list-template .flex-grow-1 > div {
+    margin-bottom: 10px; /* Ajusta el margen entre elementos según sea necesario */
+}
+
+#list-template img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilos adicionales según sea necesario */
+#list-template .badge {
+    /* Agrega estilos según sea necesario para el span con la clase "badge" */
+}
+
 
 
 
