@@ -41,6 +41,7 @@
     margin-bottom: 10px;
 }
 
+
 #list-template {
     display: flex;
     justify-content: space-between;
@@ -57,15 +58,23 @@
     margin-bottom: 10px; /* Ajusta el margen entre elementos según sea necesario */
 }
 
+#list-template .mi-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #list-template img {
     max-width: 100%;
     height: auto;
+    border-radius: 5px; /* Añade un borde redondeado si lo deseas */
 }
 
 /* Estilos adicionales según sea necesario */
 #list-template .badge {
     /* Agrega estilos según sea necesario para el span con la clase "badge" */
 }
+
 
 
 
