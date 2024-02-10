@@ -1,9 +1,5 @@
 body {
-    background-image: url('/fondochido.jpg');
-     background-size: cover; /* Ajusta la imagen para cubrir completamente el fondo */
-    background-position: center; /* Centra la imagen en el fondo */
-    padding: 20px; /* Ajusta el valor según el espacio deseado alrededor de los elementos */
-    margin: 0; /* Elimina el margen predeterminado del cuerpo */
+    
     padding: 20px; /* Ajusta el valor según el espacio deseado alrededor de los elementos */
     margin: 0; /* Elimina el margen predeterminado del cuerpo */
 }
