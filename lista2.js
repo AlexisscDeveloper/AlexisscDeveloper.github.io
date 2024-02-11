@@ -1,20 +1,24 @@
 document.addEventListener("DOMContentLoaded", async () => {
+    let page = 1; // Página actual de la API
+    const charactersPerPage = 20; // Cantidad de personajes por página
+
     document.querySelector(".btn-primary").addEventListener("click", async () => {
         const itemlist = document.getElementById("my-list");
         const template = document.getElementById("list-template");
-        const total = itemlist.childElementCount + 1;
 
-        const response = await fetch(`https://rickandmortyapi.com/api/character`);
+        // Calcular el inicio y el final del rango de personajes en la página actual
+        const startIndex = (page - 1) * charactersPerPage;
+        const endIndex = startIndex + charactersPerPage;
+
+        const response = await fetch(`https://rickandmortyapi.com/api/character?page=${page}`);
         const data = await response.json();
 
-        // Obtener los primeros 20 personajes
-        const first20Characters = data.results.slice(0, 20);
+        const characters = data.results.slice(startIndex, endIndex);
 
-        first20Characters.forEach(character => {
+        characters.forEach((character, index) => {
             const clone = document.importNode(template.content, true);
-            clone.querySelector("[data-id='number']").textContent = `${total}`;
-
-            // Ajustar los datos del personaje en el clon
+            const characterNumber = startIndex + index + 1;
+            clone.querySelector("[data-id='number']").textContent = characterNumber;
             clone.querySelector("[data-id='imagen']").src = character.image;
             clone.querySelector("[data-id='Id']").textContent = character.id;
             clone.querySelector("[data-id='Nombre']").textContent = character.name;
@@ -23,12 +27,14 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             itemlist.appendChild(clone);
         });
+
+        page++; // Incrementar la página para la próxima solicitud
     });
 
     document.querySelector(".btn.btn-light").addEventListener("click", () => {
         const itemlist = document.getElementById("my-list");
-       // itemlist.replaceChildren();
-        itemlis.innerHTML = '';
+        itemlist.innerHTML = ''; // Limpiar la lista al hacer clic en "Limpiar lista"
+        page = 1; // Reiniciar la página al limpiar la lista
     });
 });
 
