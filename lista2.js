@@ -27,7 +27,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     document.querySelector(".btn.btn-light").addEventListener("click", () => {
         const itemlist = document.getElementById("my-list");
-        itemlist.replaceChildren();
+       // itemlist.replaceChildren();
+        itemlis.innerHTML = '';
     });
 });
 
