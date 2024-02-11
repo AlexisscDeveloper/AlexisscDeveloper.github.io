@@ -1,40 +1,34 @@
-document.addEventListener("DOMContentLoaded", async () => {
+document.addEventListener("DOMContentLoaded", () => {
     let page = 1; // Página actual de la API
-    const charactersPerPage = 20; // Cantidad de personajes por página
-
-    document.querySelector(".btn-primary").addEventListener("click", async () => {
+    
+    document.querySelector(".btn-primary").addEventListener("click", async (event) => {
         const itemlist = document.getElementById("my-list");
         const template = document.getElementById("list-template");
-
-        // Calcular el inicio y el final del rango de personajes en la página actual
-        const startIndex = (page - 1) * charactersPerPage;
-        const endIndex = startIndex + charactersPerPage;
-
+        const total = itemlist.childElementCount + 1;
+        
+        // Hacer la solicitud a la API con el ID del primer personaje en la página actual
         const response = await fetch(`https://rickandmortyapi.com/api/character?page=${page}`);
         const data = await response.json();
-
-        const characters = data.results.slice(startIndex, endIndex);
-
-        characters.forEach((character, index) => {
+        
+        data.results.forEach(async character => {
             const clone = document.importNode(template.content, true);
-            const characterNumber = startIndex + index + 1;
-            clone.querySelector("[data-id='number']").textContent = characterNumber;
+            clone.querySelector("[data-id='number']").textContent = `${total}`;
             clone.querySelector("[data-id='imagen']").src = character.image;
             clone.querySelector("[data-id='Id']").textContent = character.id;
             clone.querySelector("[data-id='Nombre']").textContent = character.name;
             clone.querySelector("[data-id='Estatus']").textContent = character.status;
             clone.querySelector("[data-id='Especie']").textContent = character.species;
-
             itemlist.appendChild(clone);
         });
-
+        
         page++; // Incrementar la página para la próxima solicitud
     });
 
-    document.querySelector(".btn.btn-light").addEventListener("click", () => {
+    document.querySelector(".btn.btn-light").addEventListener("click", event => {
         const itemlist = document.getElementById("my-list");
-        itemlist.innerHTML = ''; // Limpiar la lista al hacer clic en "Limpiar lista"
+        itemlist.replaceChildren();
         page = 1; // Reiniciar la página al limpiar la lista
     });
 });
+
 
