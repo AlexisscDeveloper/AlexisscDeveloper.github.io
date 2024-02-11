@@ -20,10 +20,10 @@ document.addEventListener("DOMContentLoaded", () => {
             clone.querySelector("[data-id='Especie']").textContent = personaje.species;
             itemlist.appendChild(clone);
 
-            pagina++;
+            
         });
         
-        //pagina++; // Incrementamos la variable "pagina" para que cuando se le de de nuevo al boton, me ponga ahora la siguiente pagina que corresponda 
+        pagina++; // Incrementamos la variable "pagina" para que cuando se le de de nuevo al boton, me ponga ahora la siguiente pagina que corresponda 
     });
 
     document.querySelector(".btn.btn-light").addEventListener("click", event => {
