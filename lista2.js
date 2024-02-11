@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
         
         data.results.forEach(async personaje => {
             const clone = document.importNode(template.content, true);
-            clone.querySelector("[data-id='number']").textContent = `${total}`;
+            //clone.querySelector("[data-id='number']").textContent = `${total}`;
             clone.querySelector("[data-id='imagen']").src = personaje.image;
             clone.querySelector("[data-id='Id']").textContent = personaje.id;
             clone.querySelector("[data-id='Nombre']").textContent = personaje.name;
