@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const template = document.getElementById("list-template");
         const total = itemlist.childElementCount + 1;
         
-        // Hacer la solicitud a la API con el ID del primer personaje en la página actual
+        
         const response = await fetch(`https://rickandmortyapi.com/api/character?page=${pagina}`);
         const data = await response.json();
         
